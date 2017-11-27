@@ -1,0 +1,75 @@
+.code-container {
+    position: relative;
+}
+.code-pre {
+    list-style: none;
+    width: 50px;
+    margin: 0;
+    padding: 5px 0;
+    background-color: #EEEEEE;
+    color: rgb(153, 153, 153);
+    text-align: right;
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 150%;
+    overflow-x: none;
+}
+.code-pre li {
+    padding: 0 5px;
+}
+.code-pre-span {
+    width: 40px;
+    background-color: #EEEEEE;
+    text-align: right;
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 150%;
+    color: rgb(153, 153, 153);
+    padding: 0 5px;
+}
+.code-box {
+    margin-left: 50px;
+    line-height: 150%;
+    padding: 5px !important;
+}
+.code-ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0 50px;
+}
+.code-li {
+    padding: 0 5px;
+}
+.code-li code {
+    line-height: 150%;
+    padding: 0;
+}
+.codes-pre {
+    list-style: none;
+    width: 50px;
+    margin: 0;
+    padding: 0;
+    background-color: #EEEEEE;
+    color: rgb(153, 153, 153);
+    text-align: right;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow-x: none;
+}
+.codes-pre li {
+    padding: 0 5px;
+    line-height: 150%;
+}
+
+.code-remark {
+    background-color: red;
+}
+.code-no-remark {
+    background-color: #333333;
+}
+.code-ul .hljs {
+    background: transparent !important;
+}

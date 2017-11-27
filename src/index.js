@@ -1,4 +1,5 @@
 import HighlightCode from './HighlightCode';
+import HighlightCodes from './HighlightCodes';
 
 import './languages';
 
@@ -9,6 +10,7 @@ import './languages';
  */
 function install(Vue) {
 	Vue.component('highlight-code', HighlightCode);
+	Vue.component('highlight-codes', HighlightCodes);
 }
 
 if ((typeof window !== 'undefined') && window.Vue) {

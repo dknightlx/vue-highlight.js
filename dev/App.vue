@@ -1,5 +1,6 @@
 <template>
 	<div id="app">
+		
 		<h1>Static Code</h1>
 		<div><b>Code Block:</b></div>
 		<highlight-code auto>
@@ -42,11 +43,12 @@
 
 		<h1>Dynamic Code</h1>
 		<div><b>Code Block:</b></div>
-		<highlight-code lang="javascript" :code="blockCode"></highlight-code>
+		<highlight-codes lang="javascript" :code="blockCodes"></highlight-codes>
 		<button type="button" @click="changeBlockCode">Change it!</button>
 		<hr class="divider">
 		<div>
 			<b>Inline Code Block:</b> <highlight-code lang="javascript" inline :code="inlineCode"></highlight-code>
+			<b>Inline Code Block:</b> <highlight-codes :start="22" lang="javascript" inline :code="inlineCodes"></highlight-codes>
 		</div>
 		<button type="button" @click="changeInlineCode">Change it!</button>
 	</div>
@@ -62,7 +64,9 @@ const firstBlockCode = `
 		});
 	}
 `;
-
+const firstBlockCodes = [
+	'let map;', '	function initMap() {'
+];
 const secondBlockCode = `
 	function initMap() {
 		let myLatLng = {lat: -25.363, lng: 131.044};
@@ -81,14 +85,18 @@ const secondBlockCode = `
 `;
 
 const firstInlineCode = `console.log('Hello, World!');`;
+const firstInlineCodes = [`console.log('Hello, World!');`];
+
 const secondInlineCode = `alert('Hello, Mars!');`;
 
 export default {
 	data() {
 		return {
 			blockCode: firstBlockCode,
+			blockCodes: firstBlockCodes,
 			blockState: 0,
 			inlineCode: firstInlineCode,
+			inlineCodes: firstInlineCodes,
 			inlineState: 0
 		};
 	},
